@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolicyTrace India - Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <header class="bg-blue-600 text-white p-6">
+        <h1 class="text-3xl font-bold">PolicyTrace India</h1>
+        <p class="mt-2">Track legislation. Understand impact. Take action.</p>
+    </header>
+
+    <main class="container mx-auto p-6">
+        <input type="text" id="search" placeholder="Search bills..." 
+               class="w-full p-3 border rounded-lg mb-6">
+
+        <div id="bills" class="grid gap-4"></div>
+    </main>
+
+    <script>
+        const mockBills = [
+            {
+                id: '1',
+                title: 'Digital Personal Data Protection Bill, 2023',
+                summary: 'Provides for the processing of digital personal data in a manner that recognizes both the right of individuals to protect their personal data and the need to process such data for lawful purposes.',
+                status: 'Passed',
+                ministry: 'Ministry of Electronics and IT'
+            },
+            {
+                id: '2',
+                title: 'National Food Security (Amendment) Bill, 2023',
+                summary: 'Amends the National Food Security Act to expand coverage and improve implementation of food security programs across India.',
+                status: 'Under Review',
+                ministry: 'Ministry of Consumer Affairs'
+            },
+            {
+                id: '3',
+                title: 'Labour Code on Social Security, 2023',
+                summary: 'Consolidates laws relating to social security with the goal to extend social security to all employees and workers in the organized or unorganized sectors.',
+                status: 'Introduced',
+                ministry: 'Ministry of Labour'
+            }
+        ];
+
+        function renderBills(bills) {
+            const container = document.getElementById('bills');
+            container.innerHTML = bills.map(bill => `
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg cursor-pointer" 
+                     onclick="showBillDetail('${bill.id}')">
+                    <h2 class="text-xl font-semibold mb-2">${bill.title}</h2>
+                    <p class="text-gray-600 mb-2">${bill.summary}</p>
+                    <div class="flex gap-4 text-sm text-gray-500">
+                        <span>Status: ${bill.status}</span>
+                        <span>Ministry: ${bill.ministry}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function showBillDetail(id) {
+            const bill = mockBills.find(b => b.id === id);
+            alert(`Bill Details:\n\n${bill.title}\n\n${bill.summary}\n\nStatus: ${bill.status}\nMinistry: ${bill.ministry}\n\n[Full functionality requires backend setup]`);
+        }
+
+        document.getElementById('search').addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const filtered = mockBills.filter(b => 
+                b.title.toLowerCase().includes(term) || 
+                b.summary.toLowerCase().includes(term)
+            );
+            renderBills(filtered);
+        });
+
+        renderBills(mockBills);
+    </script>
+</body>
+</html>

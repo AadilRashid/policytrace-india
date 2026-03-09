@@ -1,0 +1,67 @@
+-- Sample bills data for PolicyTrace India
+-- Based on real bills from PRS Legislative Research
+
+INSERT INTO bills (id, title, summary, full_text, status, ministry, introduced_date) VALUES
+('prs-1', 
+ 'The Digital Personal Data Protection Bill, 2023',
+ 'Provides for the processing of digital personal data in a manner that recognizes both the right of individuals to protect their personal data and the need to process such data for lawful purposes.',
+ 'A Bill to provide for the processing of digital personal data in a manner that recognizes both the right of individuals to protect their personal data and the need to process such data for lawful purposes and for matters connected therewith or incidental thereto.',
+ 'Passed',
+ 'Ministry of Electronics and Information Technology',
+ '2023-08-03'),
+
+('prs-2',
+ 'The Bharatiya Nyaya Sanhita, 2023',
+ 'Replaces the Indian Penal Code, 1860. Defines offences and prescribes punishments for them.',
+ 'A Bill to consolidate and amend the provisions relating to offences and for matters connected therewith or incidental thereto.',
+ 'Passed',
+ 'Ministry of Home Affairs',
+ '2023-08-11'),
+
+('prs-3',
+ 'The Telecommunications Bill, 2023',
+ 'Provides for development, expansion and operation of telecommunication services and telecommunication networks.',
+ 'A Bill to provide for development, expansion and operation of telecommunication services and telecommunication networks, assignment of spectrum, and for matters connected therewith or incidental thereto.',
+ 'Passed',
+ 'Ministry of Communications',
+ '2023-12-18'),
+
+('prs-4',
+ 'The Coastal Aquaculture Authority (Amendment) Bill, 2023',
+ 'Amends the Coastal Aquaculture Authority Act, 2005 to regulate coastal aquaculture in India.',
+ 'A Bill to amend the Coastal Aquaculture Authority Act, 2005.',
+ 'Pending',
+ 'Ministry of Fisheries, Animal Husbandry and Dairying',
+ '2023-12-11'),
+
+('prs-5',
+ 'The Oilfields (Regulation and Development) Amendment Bill, 2024',
+ 'Amends the Oilfields Act, 1948 to regulate the business of winning petroleum.',
+ 'A Bill to amend the Oilfields (Regulation and Development) Act, 1948.',
+ 'Introduced',
+ 'Ministry of Petroleum and Natural Gas',
+ '2024-02-05'),
+
+('prs-6',
+ 'The National Food Security (Amendment) Bill, 2024',
+ 'Amends the National Food Security Act to expand coverage and improve implementation of food security programs.',
+ 'A Bill to amend the National Food Security Act, 2013 to provide for food and nutritional security in human life cycle approach.',
+ 'Under Review',
+ 'Ministry of Consumer Affairs, Food and Public Distribution',
+ '2024-01-15'),
+
+('prs-7',
+ 'The Labour Code on Social Security (Amendment) Bill, 2024',
+ 'Consolidates laws relating to social security with the goal to extend social security to all employees and workers.',
+ 'A Bill to amend and consolidate the laws relating to social security with the goal to extend social security to all employees and workers either in the organized or unorganized or any other sectors.',
+ 'Introduced',
+ 'Ministry of Labour and Employment',
+ '2024-02-20'),
+
+('prs-8',
+ 'The Right to Education (Amendment) Bill, 2024',
+ 'Amends the Right of Children to Free and Compulsory Education Act, 2009.',
+ 'A Bill to amend the Right of Children to Free and Compulsory Education Act, 2009.',
+ 'Under Review',
+ 'Ministry of Education',
+ '2024-01-28');
