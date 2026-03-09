@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-accent: 0 0% 0%;
+    --radius: 0.375rem;
+  }
+  
+  body {
+    @apply antialiased bg-white text-black;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  /* Shimmer animation */
+  .shimmer-animation {
+    animation: shimmer 2s infinite;
+  }
+  
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Skeleton */
+  .skeleton {
+    @apply animate-pulse bg-gray-100 rounded-md;
+  }
+  
+  /* Minimal shadows */
+  .shadow-border {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+  }
+  
+  .shadow-border-hover {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+  }
+}
