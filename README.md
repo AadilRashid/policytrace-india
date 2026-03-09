@@ -61,7 +61,7 @@ cp .env.local.example .env.local
 npm run dev
 ```
 
-Visit http://localhost:3000
+Visit https://policytrace-india.vercel.app/
 
 ## Usage
 
